@@ -35,6 +35,9 @@ live-server
 ```
 index.html            homepage
 grant.html            grant program details
+404.html              not-found page (GitHub Pages serves this automatically)
+robots.txt            crawler policy, points at the sitemap
+sitemap.xml           the five public URLs
 projects/             one page per project
 css/
   base.css            design tokens (color, type, spacing) and resets
@@ -42,8 +45,13 @@ css/
   components.css      typography assignment and form/focus styles
 js/main.js            scroll-spy navigation and the hero slideshow
 assets/icons/         logo and favicon
-assets/images/        hero photographs
+assets/images/        hero photographs and the link-preview card
+assets/images/projects/  web-sized screenshots for the project pages
 ```
+
+Screenshot originals live in `assets/screenshots/` and are gitignored — they run
+to tens of megabytes. Only the resized copies under `assets/images/projects/` are
+committed.
 
 ## Notes
 
@@ -55,9 +63,15 @@ both clear AA on every surface in the palette.
 
 **Hero slideshow.** Add a photo by dropping a 1600×670 file in `assets/images/` and
 adding one `<img class="hero-slide">` to the slideshow block in `index.html`. The
-navigation dots, rotation, and lazy-loading all derive from the number of images
-present — there is no list to keep in sync. It pauses on hover and honors
-`prefers-reduced-motion`.
+navigation dots, rotation, and deferred loading all derive from the number of images
+present — there is no list to keep in sync. Only the first photo is fetched on load;
+the rest attach their `src` when first shown. It pauses on hover, has an explicit
+Pause control (WCAG 2.2.2), and honors `prefers-reduced-motion`.
+
+**Link previews.** Each page carries Open Graph tags and a canonical URL. `og:image`
+must be an absolute URL, so those point at `https://blouyakis.github.io/portfolio/…`
+— if the site ever moves to a custom domain, update the URLs in the five page heads,
+`sitemap.xml`, `robots.txt`, and the root-relative paths in `404.html`.
 
 ## License
 

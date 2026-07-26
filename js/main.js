@@ -58,11 +58,28 @@ document.querySelectorAll("[data-slideshow]").forEach((show) => {
   // One photo isn't a slideshow — leave it as a plain image.
   if (slides.length < 2) return;
 
-  // Only the first slide needs to load right away.
-  slides.slice(1).forEach((slide) => slide.setAttribute("loading", "lazy"));
+  // These sit stacked in the viewport, so loading="lazy" would fetch them all
+  // on first paint anyway. Hold the URL in data-src and attach it only once
+  // the slide is first needed, so the hero costs one photo instead of four.
+  slides.slice(1).forEach((slide) => {
+    slide.dataset.src = slide.src;
+    slide.removeAttribute("src");
+  });
+
+  const load = (slide) => {
+    if (slide.dataset.src) {
+      slide.src = slide.dataset.src;
+      delete slide.dataset.src;
+    }
+  };
+
+  const controls = document.createElement("div");
+  controls.className = "slideshow-controls";
 
   const dots = document.createElement("div");
   dots.className = "slideshow-dots";
+  dots.setAttribute("role", "group");
+  dots.setAttribute("aria-label", "Choose a photo");
 
   const buttons = slides.map((slide, i) => {
     const dot = document.createElement("button");
@@ -70,43 +87,73 @@ document.querySelectorAll("[data-slideshow]").forEach((show) => {
     dot.className = "slideshow-dot";
     dot.setAttribute("aria-label", `Show photo ${i + 1} of ${slides.length}`);
     dot.addEventListener("click", () => {
-      show.dataset.paused = "true"; // a deliberate choice wins over the timer
+      // Picking a photo is a deliberate choice — stop rotating for good, and
+      // keep it stopped. Hovering away must not quietly restart it.
+      stopped = true;
+      syncToggle();
       go(i);
     });
     dots.append(dot);
     return dot;
   });
 
-  show.after(dots);
+  // WCAG 2.2.2: anything that moves for more than five seconds needs a way to
+  // stop it that doesn't depend on hovering.
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "slideshow-toggle";
+
+  controls.append(dots, toggle);
+  show.after(controls);
 
   let current = 0;
+  let stopped = false; // set by the viewer; hover must never clear it
+  let hovering = false; // transient, from pointer or focus
 
   const go = (next) => {
     current = (next + slides.length) % slides.length;
-    slides.forEach((slide, i) =>
-      slide.classList.toggle("is-active", i === current),
-    );
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("is-active", i === current);
+      if (i === current) load(slide);
+    });
     buttons.forEach((dot, i) =>
       dot.setAttribute("aria-current", i === current ? "true" : "false"),
     );
+    // Warm the next one so the cross-fade has something to fade to.
+    load(slides[(current + 1) % slides.length]);
   };
 
+  const syncToggle = () => {
+    toggle.textContent = stopped ? "Play" : "Pause";
+    toggle.setAttribute(
+      "aria-label",
+      stopped ? "Play the photo slideshow" : "Pause the photo slideshow",
+    );
+  };
+
+  toggle.addEventListener("click", () => {
+    stopped = !stopped;
+    syncToggle();
+  });
+
   go(0);
+  syncToggle();
 
   // Respect people who've asked the OS to reduce motion — they still get the
-  // dots, just no movement they didn't ask for.
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  // dots and the control, just no movement they didn't ask for.
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    stopped = true;
+    syncToggle();
+    return;
+  }
 
   setInterval(() => {
-    if (show.dataset.paused !== "true") go(current + 1);
+    if (!stopped && !hovering) go(current + 1);
   }, SLIDE_INTERVAL);
 
   // Don't advance out from under someone reading or tabbing through it.
-  const pause = () => (show.dataset.paused = "true");
-  const resume = () => (show.dataset.paused = "false");
-
-  show.addEventListener("mouseenter", pause);
-  show.addEventListener("mouseleave", resume);
-  dots.addEventListener("focusin", pause);
-  dots.addEventListener("focusout", resume);
+  show.addEventListener("mouseenter", () => (hovering = true));
+  show.addEventListener("mouseleave", () => (hovering = false));
+  controls.addEventListener("focusin", () => (hovering = true));
+  controls.addEventListener("focusout", () => (hovering = false));
 });

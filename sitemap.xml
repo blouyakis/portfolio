@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://blouyakis.github.io/portfolio/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://blouyakis.github.io/portfolio/grant.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blouyakis.github.io/portfolio/projects/gardenbook.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blouyakis.github.io/portfolio/projects/cashin.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blouyakis.github.io/portfolio/projects/agenda-agent.html</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
