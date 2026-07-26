@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Barbara Louyakis" />
+    <meta
+      name="description"
+      content="Portfolio of Bobbi Louyakis — computer science graduate student, mariner, and EMT coordinating offshore wind training grants for Massachusetts fishing communities."
+    />
+    <title>Bobbi Louyakis | Portfolio</title>
+    <link rel="icon" href="assets/icons/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#hero">Skip to main content</a>
+    <div class="site-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img
+            class="brand-mark"
+            src="assets/icons/logo.png"
+            alt="Bobbi Louyakis logo"
+            width="56"
+            height="56"
+          />
+          <div>
+            <p class="brand-name">Bobbi Louyakis</p>
+            <p class="brand-tag">Computer Science · Mariner · EMT</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="#hero">Overview</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#grant-work">Grant Work</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#service">Service</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
+        <div class="sidebar-note">
+          <p>
+            Located on the South Coast of Massachusetts.
+          </p>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section id="hero" class="hero-section">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio</p>
+            <h1>
+              Full-stack developer.
+              <span class="hero-accent">On land or at sea</span>, I build things
+              that work.
+            </h1>
+            <p class="hero-description">
+              I'm a full-stack developer finishing an M.S. in Computer Science
+              at Northeastern's Khoury College, building web and mobile
+              applications with Node, Express, MongoDB, React, and Kotlin.
+              Alongside that I work as an EMT and coordinate a Massachusetts
+              Clean Energy Center grant that funds offshore wind training for
+              commercial fishermen.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View Projects</a>
+              <a class="button secondary" href="#grant-work">Grant Work</a>
+            </div>
+
+            <!-- To add a photo: drop a 1600x670 file in assets/images and add
+                 another <img class="hero-slide"> below. Dots and rotation are
+                 wired up automatically. Keep is-active on the first one. -->
+            <div class="hero-slideshow" data-slideshow>
+              <img
+                class="hero-slide is-active"
+                src="assets/images/sunset.jpg"
+                alt="A sunset sky streaked with pink, coral, and gold clouds"
+                width="1600"
+                height="670"
+              />
+              <img
+                class="hero-slide"
+                src="assets/images/sun.jpg"
+                alt="A deep red sun setting over the water behind a sailboat on the horizon"
+                width="1600"
+                height="670"
+              />
+              <img
+                class="hero-slide"
+                src="assets/images/rainbow.jpg"
+                alt="A rainbow meeting the ocean horizon beyond a channel buoy"
+                width="1600"
+                height="670"
+              />
+              <img
+                class="hero-slide"
+                src="assets/images/bow.jpg"
+                alt="Looking down over the white bow of a vessel and its anchor gear into deep blue-green water"
+                width="1600"
+                height="670"
+              />
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-headline">At a glance</div>
+            <div class="hero-highlights">
+              <div class="highlight-card">
+                <p class="highlight-title">Northeastern University</p>
+                <p class="highlight-copy">
+                  MS, Computer Science — expected May 2027.
+                </p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-title">Licensed &amp; certified</p>
+                <p class="highlight-copy">
+                  USCG STCW, NREMT and Massachusetts EMT-B, AHA CPR Instructor.
+                </p>
+              </div>
+              <div class="highlight-card">
+                <p class="highlight-title">US Air Force veteran</p>
+                <p class="highlight-copy">
+                  Airman First Class — National Defense Service Medal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section-panel">
+          <div class="section-header">
+            <p class="section-label">Web &amp; Mobile Development</p>
+            <h2>Featured projects</h2>
+          </div>
+          <div class="grid cards-grid">
+            <a class="project-card" href="projects/gardenbook.html">
+              <p class="project-tag">GardenBook</p>
+              <h3>Plant care made easy</h3>
+              <p>
+                Track your garden, view plant information, and stay on top of
+                watering schedules.
+              </p>
+              <div class="project-meta">
+                React 19 · Node + Express 5 · MongoDB
+              </div>
+            </a>
+            <a class="project-card" href="projects/cashin.html">
+              <p class="project-tag">CashIn</p>
+              <h3>Smart budgeting on Android</h3>
+              <p>
+                A native Android app for tracking cash flow and savings goals,
+                synced to the cloud across devices.
+              </p>
+              <div class="project-meta">
+                Kotlin · Jetpack Compose · Firebase
+              </div>
+            </a>
+            <a class="project-card" href="projects/agenda-agent.html">
+              <p class="project-tag">Agenda Agent</p>
+              <h3>Planning with purpose</h3>
+              <p>
+                Organize meetings, agendas, and next steps in a clean, calm
+                interface.
+              </p>
+              <div class="project-meta">
+                Vanilla ES6 · Node + Express 5 · MongoDB
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section id="skills" class="section-panel">
+          <div class="section-header">
+            <p class="section-label">Technical Skills</p>
+            <h2>What I build with</h2>
+          </div>
+          <div class="skill-groups">
+            <div class="skill-group">
+              <h3>Languages</h3>
+              <ul class="tech-list">
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Kotlin</li>
+                <li>Swift</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Rust</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Frameworks &amp; libraries</h3>
+              <ul class="tech-list">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Jetpack Compose</li>
+                <li>Passport.js</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Databases</h3>
+              <ul class="tech-list">
+                <li>MongoDB</li>
+                <li>Firebase Firestore</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Data &amp; analytics</h3>
+              <ul class="tech-list">
+                <li>Jupyter</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>LaTeX</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Tools &amp; platforms</h3>
+              <ul class="tech-list">
+                <li>Git &amp; GitHub</li>
+                <li>VS Code</li>
+                <li>IntelliJ IDEA</li>
+                <li>PyCharm</li>
+                <li>Vite</li>
+                <li>AWS</li>
+                <li>Google Cloud Platform</li>
+                <li>Firebase</li>
+                <li>Dropbox</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Design &amp; creative</h3>
+              <ul class="tech-list">
+                <li>Adobe Illustrator</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Acrobat</li>
+                <li>Canva</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>EMS &amp; clinical software</h3>
+              <ul class="tech-list">
+                <li>ESO</li>
+                <li>iPCR</li>
+                <li>Traumasoft</li>
+                <li>Zoll ePCR</li>
+                <li>CAD dispatch systems</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Business &amp; operations</h3>
+              <ul class="tech-list">
+                <li>Toast</li>
+                <li>Aloha</li>
+                <li>Restaurant Manager</li>
+                <li>Micros / Oracle</li>
+                <li>QuickBooks</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Office &amp; productivity</h3>
+              <ul class="tech-list">
+                <li>Microsoft Word</li>
+                <li>Excel</li>
+                <li>PowerPoint</li>
+                <li>Outlook</li>
+                <li>Google Workspace</li>
+                <li>Obsidian</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Communication</h3>
+              <ul class="tech-list">
+                <li>Zoom</li>
+                <li>Slack</li>
+                <li>Microsoft Teams</li>
+                <li>Discord</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Practices</h3>
+              <ul class="tech-list">
+                <li>REST API design &amp; integration</li>
+                <li>Authentication &amp; session management</li>
+                <li>Agile team collaboration</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="grant-work" class="section-panel highlighted-section">
+          <div class="section-header">
+            <p class="section-label">Grant Coordination</p>
+            <h2>Funding the move from fishing to offshore wind</h2>
+          </div>
+          <div class="highlight-grid">
+            <div>
+              <p>
+                Since December 2025 I have been project coordinator for the
+                Gloucester Fishermen's Wives Development Project, managing
+                Massachusetts Clean Energy Center grant funds that support
+                mariner communities across the Commonwealth.
+                The grant covers the cost of the safety and survival training
+                that commercial fishermen need to qualify for offshore wind
+                work — training that otherwise runs hundreds of dollars out of
+                pocket.
+              </p>
+              <ul>
+                <li>
+                  Application intake, eligibility review, and funding approval
+                </li>
+                <li>
+                  Outreach to fishermen, training schools, and community
+                  organizations
+                </li>
+                <li>Documentation, reporting, and outcome tracking</li>
+              </ul>
+            </div>
+            <div class="callout-card">
+              <p class="callout-title">Need STCW training funded?</p>
+              <p>
+                If you work on the water in Massachusetts, you may qualify to
+                have your certification paid for. Applications are open.
+              </p>
+              <div class="callout-actions">
+                <a class="button primary" href="grant.html">Learn more</a>
+                <a
+                  class="button tertiary"
+                  href="https://form.jotform.com/253586722565063"
+                  target="_blank"
+                  rel="noopener"
+                  >Apply for funding</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="section-panel">
+          <div class="section-header">
+            <p class="section-label">Professional Work</p>
+            <h2>Experience beyond code</h2>
+          </div>
+          <div class="grid cards-grid">
+            <article class="work-card">
+              <h3>Emergency medical services</h3>
+              <p>
+                EMT-Basic with Brewster Ambulance Service since 2023, running
+                calls out of Brockton and New Bedford. Previously an EMT
+                instructor at NMETC, teaching the certification I now practice.
+              </p>
+              <div class="project-meta">
+                Brewster Ambulance, Sept 2023 – present · NMETC, Jan 2025 – Jan
+                2026
+              </div>
+            </article>
+            <article class="work-card">
+              <h3>Offshore wind operations</h3>
+              <p>
+                Mariner aboard the safety vessel Brittany Eryn supporting Empire
+                Wind construction — crew safety, regulatory compliance, and
+                coordination with offshore construction teams.
+              </p>
+              <div class="project-meta">Empire Wind · Current</div>
+            </article>
+            <article class="work-card">
+              <h3>Grant coordination</h3>
+              <p>
+                Project coordinator for the Gloucester Fishermen's Wives
+                Development Project, managing the Massachusetts Clean Energy
+                Center offshore wind educational grant.
+              </p>
+              <div class="project-meta">Gloucester, MA · Dec 2025 – present</div>
+            </article>
+            <article class="work-card">
+              <h3>Operations management</h3>
+              <p>
+                10+ years as a general manager in high-volume Boston
+                restaurants: budgeting, compliance, reporting, and leading
+                staff through the busiest nights of the year.
+              </p>
+              <div class="project-meta">Boston, MA · 2013–2024</div>
+            </article>
+          </div>
+        </section>
+
+        <section id="service" class="section-panel">
+          <div class="section-header">
+            <p class="section-label">Service</p>
+            <h2>Volunteer work and military service</h2>
+          </div>
+          <div class="table-wrap">
+            <table class="course-table">
+              <caption class="visually-hidden">
+                Volunteer roles and the years served
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Role</th>
+                  <th scope="col">Years</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Emergency Management Volunteer
+                    <span class="course-full">FEMA</span>
+                  </th>
+                  <td><span class="course-when">2024 – present</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Volunteer
+                    <span class="course-full">American Red Cross</span>
+                  </th>
+                  <td><span class="course-when">2023 – present</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Academic Tutor and Mentor</th>
+                  <td><span class="course-when">2007 – 2012</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Assistant to the Probation Officer in Charge
+                    <span class="course-full">Worcester, Massachusetts</span>
+                  </th>
+                  <td>
+                    <span class="course-none" aria-label="Years not listed"
+                      >—</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="credential-groups">
+            <div class="credential-panel">
+              <h3>Military service</h3>
+              <p class="service-branch">
+                United States Air Force — Airman First Class, veteran.
+              </p>
+              <ul class="tech-list">
+                <li>National Defense Service Medal</li>
+                <li>Air Force Training Ribbon</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" class="section-panel">
+          <div class="section-header">
+            <p class="section-label">Education &amp; Certifications</p>
+            <h2>Degrees and credentials</h2>
+          </div>
+          <div class="grid cards-grid">
+            <article class="work-card">
+              <h3>Northeastern University</h3>
+              <p>
+                Master of Science, Computer Science — Khoury College of Computer
+                Sciences, Boston. Expected May 2027.
+              </p>
+              <div class="project-meta">Cumulative GPA 3.33</div>
+            </article>
+            <article class="work-card">
+              <h3>Clark University</h3>
+              <p>
+                Bachelor of Arts, International Development and Social Change.
+              </p>
+              <div class="project-meta">2012 · Dean's List</div>
+            </article>
+            <article class="work-card">
+              <h3>Coastal Carolina University</h3>
+              <p>
+                Three years of study in political science before transferring to
+                Clark University.
+              </p>
+              <div class="project-meta">
+                Dean's List and National Dean's List
+              </div>
+            </article>
+            <article class="work-card">
+              <h3>National Medical Education &amp; Training Center</h3>
+              <p>Emergency Medical Technician certification.</p>
+              <div class="project-meta">2023</div>
+            </article>
+          </div>
+
+          <div class="course-panel">
+            <h3>Graduate coursework</h3>
+            <p>
+              Coursework at Khoury feeds directly into the projects above —
+              CS5610 produced GardenBook and Agenda Agent, and CS4520/5520
+              produced CashIn.
+            </p>
+            <ul class="tech-list">
+              <li>Object-Oriented Design</li>
+              <li>Algorithms</li>
+              <li>Data Structures &amp; Algorithm Applications</li>
+              <li>Mobile Application Development</li>
+              <li>Discrete Structures</li>
+              <li>Web Development <span class="course-state">in progress</span></li>
+              <li>
+                Foundations of Artificial Intelligence
+                <span class="course-state">Fall 2026</span>
+              </li>
+              <li>
+                Computer Systems <span class="course-state">Fall 2026</span>
+              </li>
+            </ul>
+          </div>
+          <div class="credential-groups">
+            <div class="credential-panel">
+              <h3>Mariner credentials</h3>
+              <ul class="tech-list">
+                <li>STCW — US Coast Guard</li>
+                <li>USCG Safety &amp; Survival</li>
+                <li>AMSEA Onboard Drill Instructor</li>
+                <li>SCUBA Basic</li>
+              </ul>
+            </div>
+            <div class="credential-panel">
+              <h3>EMS credentials</h3>
+              <ul class="tech-list">
+                <li>NREMT Emergency Medical Technician</li>
+                <li>Massachusetts EMT-B</li>
+                <li>AHA CPR Instructor</li>
+                <li>AHA BLS, CPR &amp; AED</li>
+                <li>FEMA Incident Command System</li>
+              </ul>
+            </div>
+            <div class="credential-panel">
+              <h3>Safety &amp; compliance</h3>
+              <ul class="tech-list">
+                <li>ServSafe Manager</li>
+                <li>Food Allergen Awareness</li>
+                <li>Crowd Manager</li>
+                <li>Active Shooter Preparedness</li>
+                <li>Workplace Harassment Prevention</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section-panel contact-panel">
+          <div class="section-header">
+            <p class="section-label">Say hello</p>
+            <h2>Let's talk about your next project or grant program.</h2>
+          </div>
+          <div class="contact-copy">
+            <p>
+              Reach out about software work, grant funding for mariner
+              training, or professional collaboration.
+            </p>
+            <address class="contact-details">
+              <span>Rochester, Massachusetts</span>
+              <a href="tel:+15086129634">(508) 612-9634</a>
+              <a href="mailto:BobbiLouyakis@iCloud.com"
+                >BobbiLouyakis@iCloud.com</a
+              >
+              <a
+                href="https://github.com/blouyakis"
+                target="_blank"
+                rel="noopener"
+                >github.com/blouyakis</a
+              >
+            </address>
+            <a class="button primary" href="mailto:BobbiLouyakis@iCloud.com"
+              >Email me</a
+            >
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>© 2026 Bobbi Louyakis</p>
+        </footer>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

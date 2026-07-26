@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+
+  /* Surfaces — warm off-white with a pink tint */
+  --bg: #fbf7f9;
+  --surface: #ffffff;
+  --surface-muted: #f5edf1;
+  --surface-strong: #eadfe6;
+
+  /* Text */
+  --text: #332a2e;
+  --muted: #594650;
+
+  /* Brand — mauve carries interactive elements, pink is decorative only.
+     #f22d92 tops out at 3.77:1 on white, so it never carries small text. */
+  --primary: #8c5270;
+  --primary-strong: #7a4462;
+  --primary-soft: #bf4a86;
+  --accent: #f22d92;
+  --accent-text: #a8356f;
+
+  --border: rgba(51, 42, 46, 0.12);
+  --border-strong: rgba(140, 82, 112, 0.35);
+  --shadow: 0 24px 40px rgba(51, 42, 46, 0.08);
+  --shadow-lift: 0 16px 28px rgba(51, 42, 46, 0.1);
+
+  --serif: "EB Garamond", Georgia, serif;
+  --sans: "Roboto", system-ui, -apple-system, sans-serif;
+
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a.button {
+  font: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(242, 45, 146, 0.22);
+}
+
+body,
+input,
+button,
+textarea,
+select {
+  font-family: var(--serif);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

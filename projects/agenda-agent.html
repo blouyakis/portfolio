@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Barbara Louyakis" />
+    <meta
+      name="description"
+      content="Agenda Agent — a planning tool for structuring meetings, tracking follow-ups, and keeping meeting agendas concise."
+    />
+    <title>Agenda Agent | Barbara Louyakis</title>
+    <link rel="icon" href="../assets/icons/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="page-header">
+        <a href="../index.html" class="back-link">← Back to portfolio</a>
+        <h1>Agenda Agent</h1>
+        <p class="section-label">
+          Full-stack web app <span class="course-state">Individual project</span>
+        </p>
+      </header>
+      <main class="project-detail">
+        <section>
+          <h2>What it is</h2>
+          <p>
+            Agenda Agent is a full-stack meeting agenda generator that helps
+            teams structure meetings, set follow-up actions, and keep agendas
+            concise and easy to use.
+          </p>
+        </section>
+        <section>
+          <h2>How it works</h2>
+          <p>
+            At its core is a rule-based algorithm that allocates the available
+            meeting time across topics by priority, so the agenda that comes out
+            reflects what actually matters rather than an even split. Generated
+            agendas can then be exported to PDF or emailed to attendees
+            automatically.
+          </p>
+          <p class="byline">
+            Designed and built solo as the midterm project for CS5610 Web
+            Development at Northeastern.
+          </p>
+        </section>
+        <section>
+          <h2>Key features</h2>
+          <ul>
+            <li>Agenda creation and progress tracking</li>
+            <li>Meeting notes with action item summaries</li>
+            <li>Accounts secured with local auth and token-based sessions</li>
+            <li>Agendas exported to PDF</li>
+            <li>Agendas delivered by email</li>
+            <li>Accessible layout for busy teams</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Built with</h2>
+          <ul class="tech-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Vanilla ES6 (ES modules)</li>
+            <li>Node.js</li>
+            <li>Express 5</li>
+            <li>MongoDB Atlas</li>
+            <li>Passport.js (local strategy)</li>
+            <li>bcryptjs</li>
+            <li>jsonwebtoken</li>
+            <li>PDFKit</li>
+            <li>Nodemailer</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Try it</h2>
+          <p>
+            The app is deployed and open to try — it opens on the sign-in
+            screen, so create an account to generate an agenda. It runs on free
+            hosting, so the first load after a quiet period can take up to a
+            minute to wake up.
+          </p>
+          <div class="callout-actions">
+            <a
+              class="button primary"
+              href="https://meeting-agenda.onrender.com/auth.html"
+              target="_blank"
+              rel="noopener"
+              >Open live demo</a
+            >
+            <a
+              class="button tertiary"
+              href="https://github.com/blouyakis/meeting_agenda"
+              target="_blank"
+              rel="noopener"
+              >View repository</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

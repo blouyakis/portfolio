@@ -1,0 +1,64 @@
+/* Typography assignment — the serif carries headings, the sans carries
+   labels, navigation, and anything small or uppercase. */
+
+.brand-name,
+.brand-tag,
+.nav-link,
+.sidebar-note p,
+.eyebrow,
+.section-label,
+.project-tag,
+.highlight-title,
+.panel-headline,
+.callout-title,
+.project-meta,
+.button,
+.site-footer,
+.skill-group h3,
+.course-panel h3,
+.credential-panel h3,
+.course-state,
+.course-table th,
+.course-when,
+.byline {
+  font-family: var(--sans);
+}
+
+.hero-copy h1,
+.section-panel h2,
+.page-header h1,
+.project-detail h2,
+.project-card h3,
+.work-card h3 {
+  font-family: var(--serif);
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button,
+input,
+textarea,
+select {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(140, 82, 112, 0.45);
+  outline-offset: 3px;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid rgba(140, 82, 112, 0.45);
+  outline-offset: 3px;
+}

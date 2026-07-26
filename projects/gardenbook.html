@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Barbara Louyakis" />
+    <meta
+      name="description"
+      content="GardenBook — a full-stack garden planning and calendar app built with Node, Express, MongoDB, and React 19, integrating three external plant and climate APIs."
+    />
+    <title>GardenBook | Barbara Louyakis</title>
+    <link rel="icon" href="../assets/icons/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="page-header">
+        <a href="../index.html" class="back-link">← Back to portfolio</a>
+        <h1>GardenBook</h1>
+        <p class="section-label">
+          Full-stack web app <span class="course-state">Team project</span>
+        </p>
+      </header>
+      <main class="project-detail">
+        <section>
+          <h2>What it is</h2>
+          <p>
+            GardenBook is a full-stack garden planning and calendar application
+            that helps users track garden progress, save plant profiles, and
+            follow planting and watering schedules tailored to where they live.
+          </p>
+        </section>
+        <section>
+          <h2>My role</h2>
+          <p>
+            Built with a two-person team for CS5610 Web Development at
+            Northeastern, Summer 2026. I owned four areas end to end:
+          </p>
+          <ul>
+            <li>The plant catalog</li>
+            <li>The planting tracker</li>
+            <li>The Explore feature</li>
+            <li>The calendar views</li>
+          </ul>
+          <p>
+            I also implemented session-based authentication, and collaborated
+            with my teammate on shared component architecture and CSS theming
+            across the app.
+          </p>
+        </section>
+        <section>
+          <h2>Key features</h2>
+          <ul>
+            <li>Plant library and care reminders</li>
+            <li>Visual garden status overview</li>
+            <li>User accounts with session-based authentication</li>
+            <li>Care calendar exported to PDF</li>
+            <li>Responsive dashboard experience</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Data sources</h2>
+          <p>
+            Three external REST APIs are combined to drive planting
+            recommendations personalized to a user's location and growing
+            season.
+          </p>
+          <ul>
+            <li><strong>Perenual</strong> — plant catalog and care data</li>
+            <li><strong>USDA</strong> — hardiness zone lookup</li>
+            <li><strong>FarmSense</strong> — first and last frost dates</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Built with</h2>
+          <ul class="tech-list">
+            <li>React 19 (hooks)</li>
+            <li>React Router</li>
+            <li>Vite</li>
+            <li>React Bootstrap</li>
+            <li>Node.js</li>
+            <li>Express 5</li>
+            <li>MongoDB (native driver)</li>
+            <li>Passport (session auth)</li>
+            <li>bcrypt</li>
+            <li>PDFKit</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Try it</h2>
+          <p>
+            The app is deployed and open to try, and the full source is on
+            GitHub. It runs on free hosting, so the first load after a quiet
+            period can take up to a minute to wake up.
+          </p>
+          <div class="callout-actions">
+            <a
+              class="button primary"
+              href="https://gardenbook-tozv.onrender.com/"
+              target="_blank"
+              rel="noopener"
+              >Open live demo</a
+            >
+            <a
+              class="button tertiary"
+              href="https://github.com/blouyakis/gardenbook"
+              target="_blank"
+              rel="noopener"
+              >View repository</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

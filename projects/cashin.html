@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Barbara Louyakis" />
+    <meta
+      name="description"
+      content="CashIn — an Android app for understanding cash flow, managing budgets, and setting savings goals."
+    />
+    <title>CashIn | Barbara Louyakis</title>
+    <link rel="icon" href="../assets/icons/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="page-header">
+        <a href="../index.html" class="back-link">← Back to portfolio</a>
+        <h1>CashIn</h1>
+        <p class="section-label">
+          Android app <span class="course-state">Team project</span>
+        </p>
+      </header>
+      <main class="project-detail">
+        <section>
+          <h2>What it is</h2>
+          <p>
+            CashIn is a native Android app designed to help users understand
+            cash flow, manage budgets, and set savings goals, with their data
+            synced to the cloud across devices.
+          </p>
+        </section>
+        <section>
+          <h2>My role</h2>
+          <p>
+            Built with a four-person team on a shared repository for CS4520/5520
+            Android Development at Northeastern. I developed the authentication
+            feature branch:
+          </p>
+          <ul>
+            <li>Welcome, Login, and a three-page register/onboarding flow</li>
+            <li>
+              An <code>AuthViewModel</code> wiring up Firebase email/password
+              authentication and Google Sign-In via Credential Manager
+            </li>
+            <li>App navigation and the nav bar</li>
+          </ul>
+          <p>
+            Along the way I resolved cross-platform integration issues,
+            including Firebase SHA-1 fingerprint configuration and
+            emulator-based testing of Google Sign-In.
+          </p>
+        </section>
+        <section>
+          <h2>Key features</h2>
+          <ul>
+            <li>Custom spending categories and tracking</li>
+            <li>Progress indicators for savings goals</li>
+            <li>Sign in with email and password or with Google</li>
+            <li>Cloud-synced data across devices</li>
+            <li>Declarative interface built with Jetpack Compose</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Built with</h2>
+          <ul class="tech-list">
+            <li>Kotlin</li>
+            <li>Jetpack Compose</li>
+            <li>Firebase Authentication</li>
+            <li>Firebase Firestore</li>
+            <li>Credential Manager</li>
+            <li>Android Studio</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Source code</h2>
+          <p>The full project, including setup instructions, is on GitHub.</p>
+          <a
+            class="button primary"
+            href="https://github.com/blouyakis/CashIn"
+            target="_blank"
+            rel="noopener"
+            >View repository</a
+          >
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

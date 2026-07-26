@@ -1,0 +1,17 @@
+# Design sources and archives — kept locally, not published
+reference/
+
+# Local tooling / editor config — only needed on this machine
+.claude/
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+._*
+# Leading slash matters: unanchored "Icon?" also matches assets/icons/
+# because git on macOS compares ignore rules case-insensitively.
+/Icon?
+
+# Node (unused by this site, but keeps stray installs out)
+node_modules/
