@@ -732,6 +732,51 @@
   list-style: none;
 }
 
+/* Screenshot galleries on the project pages. Wide browser captures stack one
+   per row; phone captures sit three across because they read fine small. */
+.shot-grid {
+  display: grid;
+  gap: 26px;
+  margin-top: 20px;
+}
+
+.shot-grid.phone-shots {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.shot {
+  margin: 0;
+}
+
+.shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lift);
+}
+
+/* Phone captures carry their own device frame — a second border boxes it twice. */
+.shot-grid.phone-shots .shot img {
+  border: none;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.shot figcaption {
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.shot-grid.phone-shots figcaption {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
 .tech-list li {
   margin: 0;
   padding: 8px 16px;
@@ -815,5 +860,10 @@
 
   .button {
     width: 100%;
+  }
+
+  /* Three phones across gets each one too narrow to read on a handset. */
+  .shot-grid.phone-shots {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

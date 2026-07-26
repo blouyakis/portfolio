@@ -1,6 +1,10 @@
 # Design sources and archives — kept locally, not published
 reference/
 
+# Full-resolution screenshot originals and the CashIn deck. The web-sized
+# copies the pages actually load live in assets/images/projects/.
+assets/screenshots/
+
 # Local tooling / editor config — only needed on this machine
 .claude/
 .vscode/
