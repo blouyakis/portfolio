@@ -47,9 +47,12 @@ body {
   color: var(--text);
 }
 
+/* height:auto must ride along with max-width. Without it, a shrunk image keeps
+   the pixel height from its width/height attributes and stretches vertically. */
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
