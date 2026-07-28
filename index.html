@@ -568,9 +568,28 @@
                 >github.com/blouyakis</a
               >
             </address>
-            <a class="button primary" href="mailto:BobbiLouyakis@iCloud.com"
-              >Email me</a
-            >
+            <div class="callout-actions">
+              <a class="button primary" href="mailto:BobbiLouyakis@iCloud.com"
+                >Email me</a
+              >
+              <!-- The download attribute only fires same-origin, which holds on
+                   GitHub Pages. Elsewhere the browser just opens the PDF. -->
+              <a
+                class="button secondary"
+                href="assets/bobbi-louyakis-resume.pdf"
+                type="application/pdf"
+                target="_blank"
+                rel="noopener"
+                >View resume (PDF)</a
+              >
+              <a
+                class="button tertiary"
+                href="assets/bobbi-louyakis-resume.pdf"
+                type="application/pdf"
+                download="Bobbi-Louyakis-Resume.pdf"
+                >Download resume</a
+              >
+            </div>
           </div>
         </section>
 

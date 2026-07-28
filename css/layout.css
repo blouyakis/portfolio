@@ -629,6 +629,13 @@
   justify-items: start;
 }
 
+/* The grid gap already spaces this row, and stretching it back to the full
+   column keeps the buttons full-width once they stack on a handset. */
+.contact-copy .callout-actions {
+  margin-top: 0;
+  justify-self: stretch;
+}
+
 .contact-details {
   display: grid;
   gap: 8px;

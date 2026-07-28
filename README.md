@@ -47,6 +47,7 @@ js/main.js            scroll-spy navigation and the hero slideshow
 assets/icons/         logo and favicon
 assets/images/        hero photographs and the link-preview card
 assets/images/projects/  web-sized screenshots for the project pages
+assets/bobbi-louyakis-resume.pdf  linked from the contact section
 ```
 
 Screenshot originals live in `assets/screenshots/` and are gitignored — they run
