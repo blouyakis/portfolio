@@ -6,7 +6,7 @@
     <meta name="author" content="Bobbi Louyakis" />
     <meta
       name="description"
-      content="GardenBook — a full-stack garden planning and calendar app built with Node, Express, MongoDB, and React 19, integrating three external plant and climate APIs."
+      content="GardenBook — a full-stack app that helps gardeners plan what to plant and when, built with Node, Express, MongoDB, and React 19, with a weekly planting calendar you can export as a PDF."
     />
     <link
       rel="canonical"
@@ -22,7 +22,7 @@
     <meta property="og:title" content="GardenBook — full-stack garden planner" />
     <meta
       property="og:description"
-      content="A garden planning and calendar app built with React 19, Node, Express, and MongoDB, combining three plant and climate APIs into planting schedules tailored to your region."
+      content="A garden planning app built with React 19, Node, Express, and MongoDB. Explore the plants that grow in your region and organize them onto a weekly planting calendar."
     />
     <meta
       property="og:image"
@@ -61,9 +61,12 @@
         <section>
           <h2>What it is</h2>
           <p>
-            GardenBook is a full-stack garden planning and calendar application
-            that helps users track garden progress, save plant profiles, and
-            follow planting and watering schedules tailored to where they live.
+            GardenBook is a full-stack web application that helps gardeners plan
+            what to plant and when to plant it. Anyone can explore plants
+            without an account; signing up adds a region and four gardens —
+            vegetables, fruits, herbs, and flowers — to sort plants into.
+            Choices land on a weekly calendar at their intended planting dates,
+            which can be filtered to one garden type or viewed whole.
           </p>
         </section>
         <section>
@@ -74,7 +77,7 @@
           </p>
           <ul>
             <li>The plant catalog</li>
-            <li>The planting tracker</li>
+            <li>The gardens and the plants saved into them</li>
             <li>The Explore feature</li>
             <li>The calendar views</li>
           </ul>
@@ -87,11 +90,27 @@
         <section>
           <h2>Key features</h2>
           <ul>
-            <li>Plant library and care reminders</li>
-            <li>Visual garden status overview</li>
+            <li>
+              Explore — every plant that grows in the user's region, sorted by
+              what should go in the ground that week, with past and future weeks
+              a click away
+            </li>
+            <li>
+              MyGarden — a weekly calendar of the user's plants on their
+              intended planting dates
+            </li>
+            <li>
+              Four garden types — vegetables, fruits, herbs, and flowers — that
+              the calendar can be toggled between or shown all at once
+            </li>
+            <li>
+              PDF export of any weekly view, one garden or all of them, to save
+              or print
+            </li>
+            <li>
+              Browsing without an account; accounts add a region and gardens
+            </li>
             <li>User accounts with session-based authentication</li>
-            <li>Care calendar exported to PDF</li>
-            <li>Responsive dashboard experience</li>
           </ul>
         </section>
         <section>
@@ -121,8 +140,9 @@
                 decoding="async"
               />
               <figcaption>
-                Explore — the plant catalog, searchable and filtered by type.
-                Photos and care data come from the Perenual API.
+                Explore — every plant that grows in the region, sorted by what
+                belongs in the ground this week. Photos and plant data come from
+                the Perenual API.
               </figcaption>
             </figure>
             <figure class="shot">
@@ -164,8 +184,9 @@
                 decoding="async"
               />
               <figcaption>
-                The weekly calendar, colour-coded by garden. Any week can be
-                exported to PDF for the potting bench.
+                MyGarden — the weekly calendar, colour-coded by garden and
+                filterable down to a single type. Any week can be exported to
+                PDF for the potting bench.
               </figcaption>
             </figure>
           </div>
